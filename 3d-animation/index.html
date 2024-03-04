@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="div1" style="--i:1"><img src="./image/adrien-converse-FWhTeWRCeis-unsplash.jpg" alt="">
+                <div class="description">
+                    <h3>SOMEONE FAMOUS</h3>
+                    <P>WEB DESIGNER</P>
+                </div>
+            </div>
+            <div class="div2" style="--i:2"><img src="./image/carlos-quintero-7mINv5udhe8-unsplash.jpg" alt="">
+                <div class="description">
+                    <h3>SOMEONE FAMOUS</h3>
+                    <P>WEB DESIGNER</P>
+                </div>    
+            </div>
+            <div class="div3" style="--i:3"><img src="./image/connor-jolley-y1-jwAqBAoo-unsplash.jpg" alt="">
+                <div class="description">
+                    <h3>SOMEONE FAMOUS</h3>
+                    <P>WEB DESIGNER</P>
+                </div>    
+            </div>
+            <div class="div4" style="--i:4"><img src="./image/connor-jolley-Y6I4VvyN_sA-unsplash.jpg" alt="">
+                <div class="description">
+                    <h3>SOMEONE FAMOUS</h3>
+                    <P>WEB DESIGNER</P>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left" onclick="rotated_left()"></div>
+            <div class="right" onclick="rotated_right()"></div>
+        </div>
+    </div>
+    <script>
+        let cube = document.querySelector('.cube');
+        let degree = 0;
+        function rotated_left() {
+            degree += 90;
+            cube.style.transform = `rotateY(${degree+45}deg)`;
+        }
+        function rotated_right() {
+            degree -= 90;
+            cube.style.transform = `rotateY(${degree+45}deg)`;
+}
+        // let style = window.getComputedStyle(cube);
+        // let transform = style.getPropertyValue('transform')
+        // console.log(transform);
+    </script>
+    
+</body>
+</html>
